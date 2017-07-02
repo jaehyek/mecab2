@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4D22306A-9297-44C4-9B9B-411652046BE1}</ProjectGuid>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>libmecab</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions);_CRT_SECURE_NO_DEPRECATE;MECAB_USE_THREAD;DLL_EXPORT;HAVE_GETENV;HAVE_WINDOWS_H;DIC_VERSION=102;VERSION="0.996/ko-0.9.0";PACKAGE="\"mecab\"";MECAB_DEFAULT_RC="c:\Program Files\mecab\etc\mecabrc"</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <CompileAsManaged>true</CompileAsManaged>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ADVAPI32.LIB;%(AdditionalDependencies)</AdditionalDependencies>
+      <AssemblyDebug>false</AssemblyDebug>
+      <CLRImageType>Default</CLRImageType>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <StripPrivateSymbols>/PDBSTRIPPED</StripPrivateSymbols>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions);_CRT_SECURE_NO_DEPRECATE;MECAB_USE_THREAD;DDLL_EXPORT;HAVE_GETENV;HAVE_WINDOWS_H;DIC_VERSION=102;VERSION="0.996/ko-0.9.0";PACKAGE="\"mecab\"";DMECAB_DEFAULT_RC="\"c:\\Program Files\\mecab\\etc\\mecabrc\""</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <CompileAsManaged>false</CompileAsManaged>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ADVAPI32.LIB;%(AdditionalDependencies)</AdditionalDependencies>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions);_CRT_SECURE_NO_DEPRECATE;MECAB_USE_THREAD;DLL_EXPORT;HAVE_GETENV;HAVE_WINDOWS_H;DIC_VERSION=102;VERSION="\"0.996/ko-0.9.0\"";PACKAGE="\"mecab\"";MECAB_DEFAULT_RC="\"c:\\Program Files\\mecab\\etc\\mecabrc\""</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+      <CLRImageType>Default</CLRImageType>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions);_CRT_SECURE_NO_DEPRECATE;MECAB_USE_THREAD;DLL_EXPORT;DHAVE_GETENV;HAVE_WINDOWS_H;DIC_VERSION=102;VERSION="\"0.996/ko-0.9.0\"";PACKAGE="\"mecab\"";MECAB_DEFAULT_RC="\"c:\\Program Files\\mecab\\etc\\mecabrc\"";_CRT_SECURE_NO_DEPRECATE;MECAB_USE_THREAD;DLL_EXPORT;HAVE_GETENV;HAVE_WINDOWS_H;DIC_VERSION=102;VERSION="\"0.996/ko-0.9.0\"";PACKAGE="\"mecab\"";MECAB_DEFAULT_RC="\"c:\\Program Files\\mecab\\etc\\mecabrc\"";_CRT_SECURE_NO_DEPRECATE;MECAB_USE_THREAD;DDLL_EXPORT;HAVE_GETENV;HAVE_WINDOWS_H;DIC_VERSION=102;VERSION="\"0.996/ko-0.9.0\"";PACKAGE="\"mecab\"";DMECAB_DEFAULT_RC="\"c:\\Program Files\\mecab\\etc\\mecabrc\"";_CRT_SECURE_NO_DEPRECATE;MECAB_USE_THREAD;DDLL_EXPORT;HAVE_GETENV;HAVE_WINDOWS_H;DIC_VERSION=102;VERSION="\"0.996/ko-0.9.0\"";PACKAGE="\"mecab\"";DMECAB_DEFAULT_RC="\"c:\\Program Files\\mecab\\etc\\mecabrc\"";_CRT_SECURE_NO_DEPRECATE;MECAB_USE_THREAD;DDLL_EXPORT;HAVE_GETENV;HAVE_WINDOWS_H;DIC_VERSION=102;VERSION="\"0.996/ko-0.9.0\"";PACKAGE="\"mecab\"";DMECAB_DEFAULT_RC="\"c:\\Program Files\\mecab\\etc\\mecabrc\"";_CRT_SECURE_NO_DEPRECATE;MECAB_USE_THREAD;DDLL_EXPORT;HAVE_GETENV;HAVE_WINDOWS_H;DIC_VERSION=102;VERSION="\"0.996/ko-0.9.0\"";PACKAGE="\"mecab\"";DMECAB_DEFAULT_RC="\"c:\\Program Files\\mecab\\etc\\mecabrc\""</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ExceptionHandling>false</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <CompileAsManaged>true</CompileAsManaged>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ADVAPI32.LIB;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="char_property.cpp" />
+    <ClCompile Include="connector.cpp" />
+    <ClCompile Include="context_id.cpp" />
+    <ClCompile Include="dictionary.cpp" />
+    <ClCompile Include="dictionary_compiler.cpp" />
+    <ClCompile Include="dictionary_generator.cpp" />
+    <ClCompile Include="dictionary_rewriter.cpp" />
+    <ClCompile Include="eval.cpp" />
+    <ClCompile Include="feature_index.cpp" />
+    <ClCompile Include="iconv_utils.cpp" />
+    <ClCompile Include="lbfgs.cpp" />
+    <ClCompile Include="learner.cpp" />
+    <ClCompile Include="learner_tagger.cpp" />
+    <ClCompile Include="libmecab.cpp" />
+    <ClCompile Include="nbest_generator.cpp" />
+    <ClCompile Include="param.cpp" />
+    <ClCompile Include="string_buffer.cpp" />
+    <ClCompile Include="tagger.cpp" />
+    <ClCompile Include="tokenizer.cpp" />
+    <ClCompile Include="utils.cpp" />
+    <ClCompile Include="viterbi.cpp" />
+    <ClCompile Include="writer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="app.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="app.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="char_property.h" />
+    <ClInclude Include="common.h" />
+    <ClInclude Include="connector.h" />
+    <ClInclude Include="context_id.h" />
+    <ClInclude Include="darts.h" />
+    <ClInclude Include="dictionary.h" />
+    <ClInclude Include="dictionary_rewriter.h" />
+    <ClInclude Include="feature_index.h" />
+    <ClInclude Include="freelist.h" />
+    <ClInclude Include="iconv_utils.h" />
+    <ClInclude Include="lbfgs.h" />
+    <ClInclude Include="learner_node.h" />
+    <ClInclude Include="learner_tagger.h" />
+    <ClInclude Include="mecab.h" />
+    <ClInclude Include="mmap.h" />
+    <ClInclude Include="nbest_generator.h" />
+    <ClInclude Include="param.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="scoped_ptr.h" />
+    <ClInclude Include="stream_wrapper.h" />
+    <ClInclude Include="string_buffer.h" />
+    <ClInclude Include="thread.h" />
+    <ClInclude Include="tokenizer.h" />
+    <ClInclude Include="ucs.h" />
+    <ClInclude Include="ucstable.h" />
+    <ClInclude Include="utils.h" />
+    <ClInclude Include="viterbi.h" />
+    <ClInclude Include="winmain.h" />
+    <ClInclude Include="writer.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
