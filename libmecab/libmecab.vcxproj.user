@@ -3,5 +3,6 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LocalDebuggerCommand>$(ProjectDir)\mecab.exe</LocalDebuggerCommand>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerCommandArguments>-d C:\msys64\tmp\mecab-ko-dic-2.0.1-20150920</LocalDebuggerCommandArguments>
   </PropertyGroup>
 </Project>
