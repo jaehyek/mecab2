@@ -23,7 +23,7 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <Keyword>ManagedCProj</Keyword>
     <RootNamespace>libmecab</RootNamespace>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -77,10 +77,10 @@
     <EmbedManifest>false</EmbedManifest>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LinkIncremental>true</LinkIncremental>
+    <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LinkIncremental>false</LinkIncremental>
+    <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -105,42 +105,53 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <Optimization>MaxSpeed</Optimization>
-      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions);_CRT_SECURE_NO_DEPRECATE;MECAB_USE_THREAD;DDLL_EXPORT;HAVE_GETENV;HAVE_WINDOWS_H;DIC_VERSION=102;VERSION="0.996/ko-0.9.0";PACKAGE="\"mecab\"";DMECAB_DEFAULT_RC="\"c:\\Program Files\\mecab\\etc\\mecabrc\""</PreprocessorDefinitions>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions);_CRT_SECURE_NO_DEPRECATE;MECAB_USE_THREAD;DLL_EXPORT;HAVE_GETENV;HAVE_WINDOWS_H;DIC_VERSION=102;VERSION="0.996/ko-0.9.0";PACKAGE="\"mecab\"";MECAB_DEFAULT_RC="c:\\Program Files\\mecab\\etc\\mecabrc"</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExceptionHandling>false</ExceptionHandling>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <WholeProgramOptimization>true</WholeProgramOptimization>
-      <CompileAsManaged>false</CompileAsManaged>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <CompileAsManaged>true</CompileAsManaged>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>ADVAPI32.LIB;%(AdditionalDependencies)</AdditionalDependencies>
-      <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <AdditionalDependencies>ADVAPI32.LIB;ucrtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OptimizeReferences>
+      </OptimizeReferences>
+      <EnableCOMDATFolding>
+      </EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>
+      </LinkTimeCodeGeneration>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <AssemblyDebug>
+      </AssemblyDebug>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions);_CRT_SECURE_NO_DEPRECATE;MECAB_USE_THREAD;DLL_EXPORT;HAVE_GETENV;HAVE_WINDOWS_H;DIC_VERSION=102;VERSION="\"0.996/ko-0.9.0\"";PACKAGE="\"mecab\"";MECAB_DEFAULT_RC="\"c:\\Program Files\\mecab\\etc\\mecabrc\""</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions);_CRT_SECURE_NO_DEPRECATE;MECAB_USE_THREAD;DLL_EXPORT;HAVE_GETENV;HAVE_WINDOWS_H;DIC_VERSION=102;VERSION="0.996/ko-0.9.0";PACKAGE="\"mecab\"";MECAB_DEFAULT_RC="c:\\Program Files\\mecab\\etc\\mecabrc"</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
     </ClCompile>
     <Link>
-      <AdditionalDependencies />
+      <AdditionalDependencies>ADVAPI32.LIB</AdditionalDependencies>
       <CLRImageType>Default</CLRImageType>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions);_CRT_SECURE_NO_DEPRECATE;MECAB_USE_THREAD;DLL_EXPORT;DHAVE_GETENV;HAVE_WINDOWS_H;DIC_VERSION=102;VERSION="\"0.996/ko-0.9.0\"";PACKAGE="\"mecab\"";MECAB_DEFAULT_RC="\"c:\\Program Files\\mecab\\etc\\mecabrc\"";_CRT_SECURE_NO_DEPRECATE;MECAB_USE_THREAD;DLL_EXPORT;HAVE_GETENV;HAVE_WINDOWS_H;DIC_VERSION=102;VERSION="\"0.996/ko-0.9.0\"";PACKAGE="\"mecab\"";MECAB_DEFAULT_RC="\"c:\\Program Files\\mecab\\etc\\mecabrc\"";_CRT_SECURE_NO_DEPRECATE;MECAB_USE_THREAD;DDLL_EXPORT;HAVE_GETENV;HAVE_WINDOWS_H;DIC_VERSION=102;VERSION="\"0.996/ko-0.9.0\"";PACKAGE="\"mecab\"";DMECAB_DEFAULT_RC="\"c:\\Program Files\\mecab\\etc\\mecabrc\"";_CRT_SECURE_NO_DEPRECATE;MECAB_USE_THREAD;DDLL_EXPORT;HAVE_GETENV;HAVE_WINDOWS_H;DIC_VERSION=102;VERSION="\"0.996/ko-0.9.0\"";PACKAGE="\"mecab\"";DMECAB_DEFAULT_RC="\"c:\\Program Files\\mecab\\etc\\mecabrc\"";_CRT_SECURE_NO_DEPRECATE;MECAB_USE_THREAD;DDLL_EXPORT;HAVE_GETENV;HAVE_WINDOWS_H;DIC_VERSION=102;VERSION="\"0.996/ko-0.9.0\"";PACKAGE="\"mecab\"";DMECAB_DEFAULT_RC="\"c:\\Program Files\\mecab\\etc\\mecabrc\"";_CRT_SECURE_NO_DEPRECATE;MECAB_USE_THREAD;DDLL_EXPORT;HAVE_GETENV;HAVE_WINDOWS_H;DIC_VERSION=102;VERSION="\"0.996/ko-0.9.0\"";PACKAGE="\"mecab\"";DMECAB_DEFAULT_RC="\"c:\\Program Files\\mecab\\etc\\mecabrc\""</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions);_CRT_SECURE_NO_DEPRECATE;MECAB_USE_THREAD;DLL_EXPORT;HAVE_GETENV;HAVE_WINDOWS_H;DIC_VERSION=102;VERSION="0.996/ko-0.9.0";PACKAGE="\"mecab\"";MECAB_DEFAULT_RC="c:\\Program Files\\mecab\\etc\\mecabrc"</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <ExceptionHandling>false</ExceptionHandling>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <WholeProgramOptimization>true</WholeProgramOptimization>
       <CompileAsManaged>true</CompileAsManaged>
+      <Optimization>Disabled</Optimization>
     </ClCompile>
     <Link>
       <AdditionalDependencies>ADVAPI32.LIB;%(AdditionalDependencies)</AdditionalDependencies>
@@ -174,15 +185,6 @@
     <ClCompile Include="utils.cpp" />
     <ClCompile Include="viterbi.cpp" />
     <ClCompile Include="writer.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="app.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="app.ico" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="char_property.h" />

@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="mecab.cpp">
+    <ClCompile Include="mecab-dict-index.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
