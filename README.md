@@ -76,25 +76,25 @@ solution이 열린 상태에서 상단 Bar의  64bit, Releae을 선택하고 각
     
 주의할 것은  setup.py 내용중 필요한 부분을 자신에 맞게 수정한다.  본 repository에 있는 것을 보면 
 
-> from distutils.core import setup,Extension,os
-> import string
-> 
-> def cmd1(str):
->     return os.popen(str).readlines()[0][:-1]
-> 
-> def cmd2(str):
->     return cmd1(str).split()
-> 
-> setup(name = "mecab-python",
-> 	version = "0.996/ko-0.9.0",
-> 	py_modules=["MeCab"],
-> 	ext_modules = [
-> 		Extension("_MeCab",
-> 			["MeCab_wrap.cxx",],
-> 			include_dirs=["C:\\project_c++\\mecab2\\libmecab"],
-> 			library_dirs=["C:\\project_c++\\mecab2\\x64\\Release"],
-> 			libraries=["libmecab"])
-> 			])
+    from distutils.core import setup,Extension,os
+    import string
+    
+    def cmd1(str):
+        return os.popen(str).readlines()[0][:-1]
+    
+    def cmd2(str):
+        return cmd1(str).split()
+    
+    setup(name = "mecab-python",
+    	version = "0.996/ko-0.9.0",
+    	py_modules=["MeCab"],
+    	ext_modules = [
+    		Extension("_MeCab",
+    			["MeCab_wrap.cxx",],
+    			include_dirs=["C:\\project_c++\\mecab2\\libmecab"],
+    			library_dirs=["C:\\project_c++\\mecab2\\x64\\Release"],
+    			libraries=["libmecab"])
+    			])
 
 추가로 주의 할 점은 libmecab.dll이 자동적으로 C:\python3\Lib\site-packages에 copy가 되지 않으므로
 직접 copy한다. 
