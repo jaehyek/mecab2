@@ -106,7 +106,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions);_CRT_SECURE_NO_DEPRECATE;MECAB_USE_THREAD;DLL_EXPORT;HAVE_GETENV;HAVE_WINDOWS_H;DIC_VERSION=102;VERSION="0.996/ko-0.9.0";PACKAGE="\"mecab\"";MECAB_DEFAULT_RC="c:\\Program Files\\mecab\\etc\\mecabrc"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions);_CRT_SECURE_NO_DEPRECATE;MECAB_USE_THREAD;DLL_EXPORT;HAVE_GETENV;HAVE_WINDOWS_H;DIC_VERSION=102;VERSION="0.996/ko-0.9.0";PACKAGE="\"mecab\"";MECAB_DEFAULT_RC="c:\\mecab\\etc\\mecabrc"</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <ExceptionHandling>false</ExceptionHandling>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
@@ -145,7 +145,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions);_CRT_SECURE_NO_DEPRECATE;MECAB_USE_THREAD;DLL_EXPORT;HAVE_GETENV;HAVE_WINDOWS_H;DIC_VERSION=102;VERSION="0.996/ko-0.9.0";PACKAGE="\"mecab\"";MECAB_DEFAULT_RC="c:\\Program Files\\mecab\\etc\\mecabrc"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions);_CRT_SECURE_NO_DEPRECATE;MECAB_USE_THREAD;DLL_EXPORT;HAVE_GETENV;HAVE_WINDOWS_H;DIC_VERSION=102;VERSION="0.996/ko-0.9.0";PACKAGE="\"mecab\"";MECAB_DEFAULT_RC="c:\\mecab\\etc\\mecabrc"</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <ExceptionHandling>false</ExceptionHandling>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
